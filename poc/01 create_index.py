@@ -8,22 +8,6 @@ index_name = os.environ["AZURE_SEARCH_INDEX_NAME"]
 key = os.environ["AZURE_SEARCH_API_KEY"]
 
 
-def get_embeddings(text: str):
-    # There are a few ways to get embeddings. This is just one example.
-    import openai
-
-    open_ai_endpoint = os.getenv("AZURE_OPENAI_ENDPOINT")
-    open_ai_key = os.getenv("AZURE_OPENAI_API_KEY")
-
-    client = openai.AzureOpenAI(
-        azure_endpoint=open_ai_endpoint,
-        api_key=open_ai_key,
-        api_version="2023-05-15",
-    )
-    embedding = client.embeddings.create(input=[text], model="text-embedding-3-small")
-    return embedding.data[0].embedding
-
-
 def get_index(name: str):
     from azure.search.documents.indexes.models import (
         SearchIndex,
