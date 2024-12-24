@@ -1,0 +1,12 @@
+python-dotenv
+azure-core
+azure-search-documents==11.5.2
+azure-storage-blob
+azure-identity
+openai
+aiohttp
+ipywidgets
+ipykernel
+azure-ai-formrecognizer
+langchain-text-splitters
+tqdm
